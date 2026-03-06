@@ -1,6 +1,10 @@
 /* 반응형조건 responsive */
 /* m(320~) -> t(1024~) -> d(1250~) */
 @media screen and (min-width:550px) {
+    #wrap .container {padding: 200px 80px;}
+    #wrap .container .contents h1 {font-size: 2rem;}
+    #wrap .container .contents h1+p {font-size: 1rem;line-height: 1.2;}
+
     /* ---------------------------------------------- 2행 퀴즈 */
     #wrap .quiz_bg .quiz {flex-flow: row nowrap;}
     /* #wrap .quiz_bg .quiz > * {flex:1;} */
@@ -8,9 +12,26 @@
     #wrap .quiz_bg .quiz .quiz_status {flex:1;}
     #wrap .quiz_bg .quiz .quiz_list h2 span {display: inline-block;}
     #wrap .quiz_bg .quiz .quiz_list h2 span:nth-child(1) {margin-right: 7px;}
+    /* =============================================== 3행 */
+    #wrap .video_bg .video h1 {margin: 0 0 70px;}
+    #wrap .video_bg .video iframe {height: 484px;}
+    /* ============================================= 5행 */
+    #wrap .humanity_bg .humanity .list {flex-flow: row nowrap;}
+    #wrap .humanity_bg .humanity .list li {flex:1;}
+    #wrap .humanity_bg .humanity .list li dl {height:200px;}
+    #wrap .humanity .list .txt {height:350px;}
+
 }
 @media screen and (min-width:860px) {
+    #wrap .container .contents h1 {font-size: 2.5rem;}
+    #wrap .container .contents h1+p {font-size: 1.38rem;line-height: 1.2;}
     #wrap .intro {padding: 300px 0 100px;}
+    /* ============================================= 5행 */
+    #wrap .humanity .list li dl dt {font-size: 2.69rem;}
+    #wrap .humanity .list .txt p {font-size: 1rem;}
+    #wrap .humanity .list .txt {height:300px;}
+
+
 } /* 860~1023 */
 
 @media screen and (min-width:1024px) {
@@ -29,8 +50,31 @@
     #wrap .quiz_bg .quiz .quiz_list #quiz_form ul {margin:0 0 37.83px;}
     #wrap .quiz_bg .quiz .quiz_list #quiz_form ul li {margin-bottom: 14px;}
     #wrap .quiz_bg .quiz .quiz_list #quiz_form ul li label {font-size: 1.25rem; background-size: 28px; display: block; line-height: 2;}
+    #wrap .humanity .list .txt {height:250px;}
+    /* ----------------------------------------------- 8행 */
+    #wrap .activity_bg .activity .details {
+        grid-template-areas:
+            'public nature'
+            'corporation nature';
+        grid-template-columns: 1fr 1fr;
+    }
+    #wrap .activity_bg .activity .details li {position: relative; padding-bottom: 22px;}
+    #wrap .activity_bg .activity .details li .txt {width:55%;}
+    #wrap .activity_bg .activity .details li:nth-child(3) .txt {position: absolute; left:0; bottom:22px;}
+    #wrap .activity_bg .activity .details li .txt dt {
+    font-size: 2.13rem; font-weight: 500;
+    line-height: 1.2;
+}
+#wrap .activity_bg .activity .details li .txt dd {
+    font-size: 1.25rem;
+    line-height: 1.7;
+}
+
 } /* 1024~1250 */
 @media screen and (min-width:1250px) {
+    #wrap .container {padding: 200px 335px;}
+    #wrap .container .contents h1 {font-size: 3.44rem;}
+    #wrap .container .contents h1+p {font-size: 1.38rem;line-height: 1.2;}
     #wrap .intro {padding:447px 0 100px;}
     #wrap .intro .logo {width:42px; left:61px; top:53px;}
     #wrap .intro h1 span {font-size: 4.38rem;}
@@ -39,5 +83,7 @@
     #wrap .container .sponsor_btn {width:409px; height: 71px;}
     #wrap .container .sponsor_btn em {font-size: 2.13rem;}
     #wrap .container .sponsor_btn::after {font-size:2rem;}
+    #wrap .humanity .list .txt {height:250px;}
+
         /* ---------------------------------------------- 2행 퀴즈 */
 }

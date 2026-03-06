@@ -1,7 +1,6 @@
 /* ====================================== 1행 캠페인 표지(m) */
 #wrap .intro {
     /* 북극곰 배경 bg1.png */
-    /* background:url(../images/bg1.png); */
     padding:100px 15px;
     background-image: url(../images/bg1.png);
     background-size: auto 130%;
@@ -21,7 +20,7 @@
 }
 #wrap .intro .logo {
     width:24px; /* w,h 중 한가지값만 설정 (나머지는 자동비율) */
-    position: fixed; left: 21px; top: 18px;
+    position: absolute; left: 21px; top: 18px;
 }
 #wrap .intro .logo img {width:100%;} /* 이미지 w100%설정, 부모크기, 위치 따라 작성 */
 #wrap .intro h1 {text-align: center; margin-bottom: 50px;}
@@ -37,8 +36,8 @@
 /* ====================================== 2행 퀴즈 */
 #wrap .quiz_bg {
     background-image:url(../images/quiz_bg.png);
-    background-size: cover; background-position: center;
-    padding: 70px;}
+    padding: 70px;
+}
 #wrap .quiz_bg .quiz {
     display: flex; flex-flow: column nowrap; /* t, d column -> row */
     gap:50px;
@@ -89,4 +88,98 @@
 }
 #wrap .quiz_bg .quiz .quiz_status {}
 #wrap .quiz_bg .quiz .quiz_status img {width:100%;}
-#wrap .quiz_bg .quiz .quiz_status p {color:#fff;line-height: 1.7;font-size: 1.25rem; text-align: center; margin: 20px 0 0;}
+#wrap .quiz_bg .quiz .quiz_status p {color:#fff;line-height: 1.7;font-size: 1.25rem; text-align: right; margin: 20px 0 0;}
+/* =============================================================== 3 */
+#wrap .video_bg {
+    background-image: url(../images/video_bg.png);
+    padding: 50px 15px;
+}
+#wrap .video h1 {text-align: center;}
+#wrap .video iframe {width: 100%; margin: 0 0 40px;}
+
+/* =============================================================== 4 */
+#wrap .reduction_bg {
+    background-image: url(../images/reduction_50_bg.png);
+}
+#wrap .reduction h1 {color:#fff;}
+#wrap .reduction h1+p {color:#fff;}
+#wrap .reduction p img {width:100%;}
+/* =============================================================== 5 */
+#wrap .humanity_bg {
+    background-color: #f5f5f5;
+}
+#wrap .humanity h1 {text-align: center;}
+#wrap .humanity h1+p {text-align: center;}
+#wrap .humanity .list {
+    display: flex; flex-flow: column nowrap; gap:20px;
+    /* display: grid; grid-template-rows: 1fr 1fr 1fr; */
+}
+#wrap .humanity .list li {}
+#wrap .humanity .list li dl::before {
+    content: ''; display: block;
+    width: 100%; height: 100%;
+    position: absolute; left:0; top:0; z-index: 9;;
+    background:linear-gradient(#000, transparent);
+}
+#wrap .humanity .list li dl {padding: 48px 0; position: relative; background-size: cover; background-position: center; text-align: center;}
+#wrap .humanity .list li dl * {color:#fff; position: relative; z-index: 10;}
+#wrap .humanity .list li:nth-child(1) dl {background-image: url(../images/melting_28t.png);}
+#wrap .humanity .list li:nth-child(2) dl {background-image: url(../images/melting_27cm.png);}
+#wrap .humanity .list li:nth-child(3) dl {background-image: url(../images/wwf.jpg);}
+#wrap .humanity .list li dl dt {margin: 0 0 11px; font-size: 1.38rem; font-weight: 500; line-height: 1.2; }
+#wrap .humanity .list li dl dd {line-height: 1.7;}
+#wrap .humanity .list .txt {background-color: #fff;padding: 20px;}
+#wrap .humanity .list .txt p {
+    font-size: 0.81rem; line-height: 1.7; text-align: center;}
+/* =============================================================== 6 */
+#wrap .crisis_bg {background-image: url(../images/reduction_50_bg.png);}
+#wrap .crisis h1 {color:#fff;}
+#wrap .crisis h1+p {color:#fff; }
+#wrap .crisis p:last-child {}
+#wrap .crisis p img {width:100%; }
+/* =============================================================== 7 */
+#wrap .wwf_bg {background-image: url(../images/wwf.jpg); position: relative;}
+#wrap .wwf_bg::before {
+    content: ''; display: block;
+    background-color: rgba(255,255,255,0.7);
+    position: absolute; left:0; top:0; z-index: 100;
+    width: 100%; height:100%;
+}
+#wrap .wwf_bg .wwf {text-align: center;position: relative; z-index: 200;}
+#wrap .wwf_bg .wwf h1 {font-size: 1.88rem; font-weight: 700;}
+#wrap .wwf_bg .wwf p {font-size: 0.81rem;}
+/* =============================================================== 8 */
+#wrap .activity_bg {}
+#wrap .activity_bg .activity {}
+#wrap .activity_bg .activity h1 {}
+#wrap .activity_bg .activity .details {
+    display: grid; gap:20px;
+    grid-template-areas:
+        'public'
+        'corporation'
+        'nature';
+}
+#wrap .activity_bg .activity .details li {background-size: cover; background-position: center; padding: 94px 0 0;}
+#wrap .activity_bg .activity .details li:nth-child(1) {
+    grid-area:public; /* grid 2차원 정렬을 위한 자식 이름 짓기(대중) */
+    background-image: url(../images/melting_28t.png);
+}
+#wrap .activity_bg .activity .details li:nth-child(2) {
+    grid-area:corporation; /* 기업 */
+    background-image: url(../images/wwf.jpg);
+}
+#wrap .activity_bg .activity .details li:nth-child(3) {
+    grid-area:nature; /* 자연 */
+    background-image: url(../images/reduction_50.png);
+}
+#wrap .activity_bg .activity .details li .txt {background-color: rgba(0,0,0,0.5); padding:20px;}
+#wrap .activity_bg .activity .details li .txt * {color: #fff; }
+#wrap .activity_bg .activity .details li .txt dt {
+    font-size: 1.38rem; font-weight: 500;
+    line-height: 1.2; margin: 0 0 18px;
+}
+#wrap .activity_bg .activity .details li .txt dd {
+    font-size: 0.81rem;
+    line-height: 1.7; margin: 0 0 22px;
+}
+#wrap .activity_bg .activity .details li .txt dd:last-child {margin:0;}
