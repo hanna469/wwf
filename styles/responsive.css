@@ -4,7 +4,6 @@
     #wrap .container {padding: 200px 80px;}
     #wrap .container .contents h1 {font-size: 2rem;}
     #wrap .container .contents h1+p {font-size: 1rem;line-height: 1.2;}
-
     /* ---------------------------------------------- 2행 퀴즈 */
     #wrap .quiz_bg .quiz {flex-flow: row nowrap;}
     /* #wrap .quiz_bg .quiz > * {flex:1;} */
@@ -20,7 +19,8 @@
     #wrap .humanity_bg .humanity .list li {flex:1;}
     #wrap .humanity_bg .humanity .list li dl {height:200px;}
     #wrap .humanity .list .txt {height:350px;}
-
+    /* =============================================== 10행 */
+    #wrap .pay_bg {padding: 100px 80px;}
 }
 @media screen and (min-width:860px) {
     #wrap .container .contents h1 {font-size: 2.5rem;}
@@ -30,10 +30,17 @@
     #wrap .humanity .list li dl dt {font-size: 2.69rem;}
     #wrap .humanity .list .txt p {font-size: 1rem;}
     #wrap .humanity .list .txt {height:300px;}
-
-
-} /* 860~1023 */
-
+    /* ============================================= 9행 */
+    #wrap .gift_info_bg .gift_info {text-align: right;}
+    #wrap .gift_info_bg .gift_info .gift_title {flex-flow: row nowrap; justify-content: space-between; align-items: flex-end;}
+    #wrap .gift_info_bg .gift_info .gift_list {
+        grid-template-areas: 
+            'sponser2 sponser3'
+            'sponser4 sponser4';
+        grid-template-columns: 1fr 1fr;
+    }
+    #wrap .gift_info_bg .gift_info .gift_list li .gift_list_bg {height: 300px;}
+} /* ------------------------------------------------------------------------------------860~1023 */
 @media screen and (min-width:1024px) {
     #wrap .intro {padding: 410px 0 100px;}
     #wrap .intro .logo {width:32px; left:36px; top:30px;}
@@ -51,6 +58,22 @@
     #wrap .quiz_bg .quiz .quiz_list #quiz_form ul li {margin-bottom: 14px;}
     #wrap .quiz_bg .quiz .quiz_list #quiz_form ul li label {font-size: 1.25rem; background-size: 28px; display: block; line-height: 2;}
     #wrap .humanity .list .txt {height:250px;}
+    
+} /* --------------------------------------------------------------------------------1024~1250 */
+@media screen and (min-width:1250px) {
+    #wrap .container {padding: 200px 150px;}
+    #wrap .container .contents h1 {font-size: 3.44rem;}
+    #wrap .container .contents h1+p {font-size: 1.38rem;line-height: 1.2;}
+    #wrap .intro {padding:447px 0 100px;}
+    #wrap .intro .logo {width:42px; left:61px; top:53px;}
+    #wrap .intro h1 span {font-size: 4.38rem;}
+    #wrap .intro h1 span:nth-child(1) {font-weight: 400;}
+    #wrap .intro h1 span:nth-child(2) {font-weight: 700;}
+    #wrap .container .sponsor_btn {width:409px; height: 71px;}
+    #wrap .container .sponsor_btn em {font-size: 2.13rem;}
+    #wrap .container .sponsor_btn::after {font-size:2rem;}
+    #wrap .humanity .list .txt {height:250px;}
+    /* ---------------------------------------------- 2행 퀴즈 */
     /* ----------------------------------------------- 8행 */
     #wrap .activity_bg .activity .details {
         grid-template-areas:
@@ -69,21 +92,17 @@
     font-size: 1.25rem;
     line-height: 1.7;
 }
-
-} /* 1024~1250 */
-@media screen and (min-width:1250px) {
-    #wrap .container {padding: 200px 335px;}
-    #wrap .container .contents h1 {font-size: 3.44rem;}
-    #wrap .container .contents h1+p {font-size: 1.38rem;line-height: 1.2;}
-    #wrap .intro {padding:447px 0 100px;}
-    #wrap .intro .logo {width:42px; left:61px; top:53px;}
-    #wrap .intro h1 span {font-size: 4.38rem;}
-    #wrap .intro h1 span:nth-child(1) {font-weight: 400;}
-    #wrap .intro h1 span:nth-child(2) {font-weight: 700;}
-    #wrap .container .sponsor_btn {width:409px; height: 71px;}
-    #wrap .container .sponsor_btn em {font-size: 2.13rem;}
-    #wrap .container .sponsor_btn::after {font-size:2rem;}
-    #wrap .humanity .list .txt {height:250px;}
-
-        /* ---------------------------------------------- 2행 퀴즈 */
+/* ============================================= 9행 */
+    #wrap .gift_info_bg .gift_info .gift_list {
+        grid-template-areas: 
+            'sponser2 sponser3 sponser4';
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+    #wrap .gift_info_bg .gift_info {text-align: center;}
+    #wrap .gift_info_bg .gift_info .info {font-size: 1.25rem;}
+/* ============================================= 10행 */
+    #wrap .pay_bg {padding: 100px 150px;}
+    #wrap .pay_bg .pay {margin: 0 auto;}
+    #wrap .pay_bg .pay dt {font-size: 2.13rem;}
+    #wrap .pay_bg .pay dd {font-size: 1.25rem;}
 }
